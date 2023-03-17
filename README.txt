@@ -26,6 +26,34 @@ Technologies utilisés :
 
 
 1. Module
+
 	a.) projet_reseau_principal.py
 
 		Ceci est le fichier contenant la classe de configuration de votre réseau social. Vous pourrez choisir à l'intérieur si vous souhaitez que votre serveur soit un serveur chatting ou bien un serveur posting.
+		Pour débuter un reseau veuillez suivre les consignes suivantes : 
+
+	valeur = Configuration()
+
+		Vous allez devoir ensuite remplir certaines valeurs que je vais vous décrire : 
+
+			1.) chating / posting ONLY.
+			2.) Nom de votre serveur.
+			3.) Votre Pseudonyme.
+			4.) Votre age INT ONLY.
+			5.) Une description brève de qui vous êtes.
+
+	
+
+	b.) module_serveur.py
+
+		EN COURS D'ECRITURE
+
+
+	c.) module_profil.py
+
+		EN COURS D'ECRITURE
+
+
+	d.) module_user_permission.py
+
+		EN COURS D'ECRITURE

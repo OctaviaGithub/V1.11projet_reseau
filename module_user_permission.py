@@ -1,6 +1,6 @@
 ##Fichier pour les fonctions d'administrateurs.
 
-import module_chat,module_profil,module_serveur,projet_réseau_principal
+import module_chat,module_profil,projet_réseau_principal
 
 class User_Permission():
 
@@ -14,20 +14,77 @@ class User_Permission():
         ##self.__perm = permission de base des quatre membres principaux du réseau.
 
     def get_liste_perm(self):
+        '''Permet de return pour des tests la liste des permissions TRUE / FALSE.'''
         print(self.__perm)
 
     def change_permission_add_salon(self,nom_role:str):
+        '''Permet de changer le TRUE / FALSE d'une permission d'un role.'''
         if self.__profil.get_role(self.__profil.get_role) == self.__liste_user[3]:
             print("#Console | Permission Accordée")
             for i in self.__perm:
-                print(i)
                 test = (nom_role+",add_salon")
-                print(test)
-                if self.__perm[str(i)] == test :
-                    if self.__perm[nom_role,",add_salon"] == True:
-                        self.__perm[nom_role,",add_salon"] = False
+                if str(i) == test :
+                    if self.__perm[str(i)] == True:
+                        self.__perm[str(i)] = False
+                        return "#Console | Changement effectué !"
                     else:
-                        self.__perm[nom_role,",add_salon"] = True
+                        self.__perm[str(i)] = True
+                        return "#Console | Changement effectué !"
+                else:
+                    print("Rien n'a été trouvé.")
+        else:
+            print("#Console | Permission non Accordée. Vous n'êtes pas l'Owner.")
+
+    def change_permission_change_salon(self,nom_role:str):
+        '''Permet de changer le TRUE / FALSE d'une permission d'un role.'''
+        if self.__profil.get_role(self.__profil.get_role) == self.__liste_user[3]:
+            print("#Console | Permission Accordée")
+            for i in self.__perm:
+                test = (nom_role+",change_salon")
+                if str(i) == test :
+                    if self.__perm[str(i)] == True:
+                        self.__perm[str(i)] = False
+                        return "#Console | Changement effectué !"
+                    else:
+                        self.__perm[str(i)] = True
+                        return "#Console | Changement effectué !"
+                else:
+                    print("Rien n'a été trouvé.")
+        else:
+            print("#Console | Permission non Accordée. Vous n'êtes pas l'Owner.")
+
+    def change_permission_change_role(self,nom_role:str):
+        '''Permet de changer le TRUE / FALSE d'une permission d'un role.'''
+        if self.__profil.get_role(self.__profil.get_role) == self.__liste_user[3]:
+            print("#Console | Permission Accordée")
+            for i in self.__perm:
+                test = (nom_role+",change_role")
+                if str(i) == test :
+                    if self.__perm[str(i)] == True:
+                        self.__perm[str(i)] = False
+                        return "#Console | Changement effectué !"
+                    else:
+                        self.__perm[str(i)] = True
+                        return "#Console | Changement effectué !"
+                else:
+                    print("Rien n'a été trouvé.")
+        else:
+            print("#Console | Permission non Accordée. Vous n'êtes pas l'Owner.")
+
+
+    def change_permission_suppr_message(self,nom_role:str):
+        '''Permet de changer le TRUE / FALSE d'une permission d'un role.'''
+        if self.__profil.get_role(self.__profil.get_role) == self.__liste_user[3]:
+            print("#Console | Permission Accordée")
+            for i in self.__perm:
+                test = (nom_role+",suppr_message")
+                if str(i) == test :
+                    if self.__perm[str(i)] == True:
+                        self.__perm[str(i)] = False
+                        return "#Console | Changement effectué !"
+                    else:
+                        self.__perm[str(i)] = True
+                        return "#Console | Changement effectué !"
                 else:
                     print("Rien n'a été trouvé.")
         else:
